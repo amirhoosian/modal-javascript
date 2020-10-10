@@ -1,0 +1,88 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #373a40;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Open Sans Condensed", sans-serif;
+}
+#open {
+  background: rgb(238, 174, 202);
+  background: radial-gradient(
+    circle,
+    rgba(238, 174, 202, 1) 0%,
+    rgba(148, 187, 233, 1) 100%
+  );
+  color: #fff;
+  font-size: 15px;
+  padding: 10px 20px;
+  cursor: pointer;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+  transition: opacity ease-in-out 0.3s;
+}
+#open:hover {
+  opacity: 0.5;
+}
+.modal-continner {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  background: rgb(128, 128, 128, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.modal-self {
+  width: 60%;
+  max-width: 100%;
+  background-color: white;
+  padding: 45px 30px;
+  text-align: center;
+  border: none;
+  outline: none;
+  border-radius: 13px;
+}
+
+.modal-self h2 {
+  margin: 0;
+  letter-spacing: 1px;
+  font-size: 38px;
+}
+.modal-self p {
+  font-size: 20px;
+}
+
+#close {
+  outline: none;
+  border: none;
+  border-radius: 12px;
+  color: #fff;
+  font-size: 23px;
+  background: rgb(174, 238, 201);
+  background: radial-gradient(
+    circle,
+    rgba(174, 238, 201, 1) 12%,
+    rgba(148, 187, 233, 1) 100%
+  );
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: opacity ease-in-out 0.4s;
+}
+#close:hover {
+  opacity: 0.8;
+}
+
+.modal-continner.show {
+  pointer-events: auto;
+  opacity: 1;
+}
